@@ -9,11 +9,11 @@ services:
       dockerfile: Dockerfile
       args:
         # Name of the custom app to include - should correspond to the name of the repository
-        APP_NAME: ${APP_NAME:-tei-publisher}
+        APP_NAME: ${APP_NAME:-teipublisher-utopia}
         # Tag or branch to build
         APP_TAG_OR_BRANCH: ${APP_TAG_OR_BRANCH:-v8.0.0}
         # GIT repository to clone the app from
-        APP_REPO: ${APP_REPO:-https://github.com/eeditiones/tei-publisher-app.git}
+        APP_REPO: ${APP_REPO:-https://github.com/miurena/teipublisher-utopia.git}
         # Endpoint for the named entity recognition service.
         NER_ENDPOINT: http://ner:8001
         # Set to 'auto' if the app should be exposed under its full path (e.g. /exist/apps/tei-publisher)
@@ -37,7 +37,7 @@ services:
     image: ghcr.io/eeditiones/tei-publisher-ner/teipublisher-ner:master
     # enable if you want to build from source:
     # build:
-    #   context: https://github.com/eeditiones/tei-publisher-ner.git#master
+    #   context: https://github.com/miurena/teipublisher-utopia-ner.git#master
     #   dockerfile: Dockerfile
     # comment in to automatically restart:
     restart: always
@@ -47,9 +47,9 @@ services:
       # eXist-db path the root of the server will be mapped to
       # should point to the app path if CONTEXT_PATH is empty (see above)
       # or the empty string otherwise
-      ROOT_PATH: ${ROOT_PATH:-/exist/apps/tei-publisher}
+      ROOT_PATH: ${ROOT_PATH:-/exist/apps/teipublisher-utopia}
       # Name of the server - irrelevant on localhost
-      SERVER_NAME: ${SERVER_NAME:-example.com}
+      SERVER_NAME: ${SERVER_NAME:-utopiadethomasmoro-digitaledition.com}
     volumes:
       - ./nginx/conf/:/etc/nginx/conf.d/:rw
       - ./nginx/templates:/etc/nginx/templates/:ro
