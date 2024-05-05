@@ -49,7 +49,7 @@ services:
       # or the empty string otherwise
       ROOT_PATH: ${ROOT_PATH:-/exist/apps/demo-multilingual-utopia-january-2024}
       # Name of the server - irrelevant on localhost
-      SERVER_NAME: ${SERVER_NAME:-utopiadethomasmoro-digitaledition.com}
+      SERVER_NAME: ${SERVER_NAME:-utopiadethomasmoro-digitaledition.com/edition}
     volumes:
       - ./nginx/conf/:/etc/nginx/conf.d/:rw
       - ./nginx/templates:/etc/nginx/templates/:ro
