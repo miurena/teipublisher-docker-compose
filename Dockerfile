@@ -38,7 +38,7 @@ ARG TEMPLATING_VERSION=1.1.0
 ARG PUBLISHER_LIB_VERSION=4.0.0
 ARG ROUTER_VERSION=1.8.0
 # replace with name of your edition repository and choose branch to build
-ARG APP_NAME=tei-publisher-app
+ARG APP_NAME=teipublisher-utopia
 ARG APP_REPO=https://github.com/miurena/teipublisher-utopia.git
 ARG APP_TEIPUBLISHER_UTOPIA=main
 
