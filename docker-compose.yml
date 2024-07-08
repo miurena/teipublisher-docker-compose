@@ -1,7 +1,7 @@
 services:
   publisher:
     build:
-      context: ${BUILD_CONTEXT:-.}
+      context: https://github.com/miurena/teipublisher-utopia.git
       # use one of the below instead if you want to build from an external git repository (needs a Dockerfile):
       # context: https://github.com/miurena/teipublisher-utopia
       # if the repo is not public, you may need to provide an ACCESS_TOKEN (specify in .env)
