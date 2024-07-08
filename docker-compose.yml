@@ -47,9 +47,9 @@ services:
       # eXist-db path the root of the server will be mapped to
       # should point to the app path if CONTEXT_PATH is empty (see above)
       # or the empty string otherwise
-      ROOT_PATH: ${ROOT_PATH:-/exist/apps/teipublisher-utopia}
+      ROOT_PATH: ${ROOT_PATH:-/exist/apps/demo-multilingual-utopia-january-2024}
       # Name of the server - irrelevant on localhost
-      SERVER_NAME: ${SERVER_NAME:-utopiadethomasmoro-digitaledition.com/edition}
+      SERVER_NAME: ${SERVER_NAME:-utopiadethomasmoro-digitaledition.com}
     volumes:
       - ./nginx/conf/:/etc/nginx/conf.d/:rw
       - ./nginx/templates:/etc/nginx/templates/:ro
