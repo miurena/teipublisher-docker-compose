@@ -82,7 +82,7 @@ ARG HTTP_PORT=8080
 ARG HTTPS_PORT=8443
 
 ARG CONTEXT_PATH=auto
-ARG NER_ENDPOINT=http://localhost:8001
+ARG NER_ENDPOINT=http://localhost:8001 
 ARG PROXY_CACHING=false
 
 RUN ["busybox", "sed", "-i", "s/<lock-table disabled=\"false\"/<lock-table disabled=\"true\"/", "etc/conf.xml"]
